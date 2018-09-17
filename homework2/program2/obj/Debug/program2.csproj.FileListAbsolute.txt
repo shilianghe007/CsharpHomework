@@ -1,0 +1,14 @@
+F:\colleage\study\大二上\C#\program1\program2\bin\Debug\program2.exe.config
+F:\colleage\study\大二上\C#\program1\program2\bin\Debug\program2.exe
+F:\colleage\study\大二上\C#\program1\program2\bin\Debug\program2.pdb
+F:\colleage\study\大二上\C#\program1\program2\obj\Debug\program2.csprojAssemblyReference.cache
+F:\colleage\study\大二上\C#\program1\program2\obj\Debug\program2.csproj.CoreCompileInputs.cache
+F:\colleage\study\大二上\C#\program1\program2\obj\Debug\program2.exe
+F:\colleage\study\大二上\C#\program1\program2\obj\Debug\program2.pdb
+F:\colleage\study\大二上\C#\homework2\program2\bin\Debug\program2.exe.config
+F:\colleage\study\大二上\C#\homework2\program2\bin\Debug\program2.exe
+F:\colleage\study\大二上\C#\homework2\program2\bin\Debug\program2.pdb
+F:\colleage\study\大二上\C#\homework2\program2\obj\Debug\program2.csprojAssemblyReference.cache
+F:\colleage\study\大二上\C#\homework2\program2\obj\Debug\program2.csproj.CoreCompileInputs.cache
+F:\colleage\study\大二上\C#\homework2\program2\obj\Debug\program2.exe
+F:\colleage\study\大二上\C#\homework2\program2\obj\Debug\program2.pdb

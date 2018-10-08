@@ -1,0 +1,7 @@
+F:\colleage\study\大二上\C#\homework4\program1\bin\Debug\homework4.exe.config
+F:\colleage\study\大二上\C#\homework4\program1\bin\Debug\homework4.exe
+F:\colleage\study\大二上\C#\homework4\program1\bin\Debug\homework4.pdb
+F:\colleage\study\大二上\C#\homework4\program1\obj\Debug\homework4.csprojAssemblyReference.cache
+F:\colleage\study\大二上\C#\homework4\program1\obj\Debug\homework4.csproj.CoreCompileInputs.cache
+F:\colleage\study\大二上\C#\homework4\program1\obj\Debug\homework4.exe
+F:\colleage\study\大二上\C#\homework4\program1\obj\Debug\homework4.pdb

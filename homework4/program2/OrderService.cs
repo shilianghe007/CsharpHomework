@@ -109,6 +109,7 @@ namespace program2
                 if (Nums[i] == Num)
                 {
                     flag = i;
+                    break;
                 }
                 else
                 {
@@ -130,6 +131,7 @@ namespace program2
                 if (goodName[i] == gN)
                 {
                     flag = i;
+                    break;
                 }
                 else
                 {
@@ -150,6 +152,7 @@ namespace program2
                 if (customerName[i] == cN)
                 {
                     flag = i;
+                    break;
                 }
                 else
                 {

@@ -13,8 +13,24 @@ namespace program2
             OrderService orderService = new OrderService();
             while(true)
             {
+                int i = 5;
                 Console.WriteLine("欢迎来到订单管理平台，请输入你想进入的服务：1.查询订单 2.修改订单 3.删除订单 4.增加订单 5.离开");
-                int i = Int32.Parse(Console.ReadLine());
+                try
+                {
+                    i = Int32.Parse(Console.ReadLine());
+                    if(i>5||i<1)
+                    {
+                        throw new MyException("输入数字不在合理范围内");
+                    }
+                }
+                catch(MyException myexception)
+                {
+                    Console.WriteLine(myexception.GetError());
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message + ",你输入了非数字");
+                }
                 switch (i)
                 {
                     case 1:
@@ -24,11 +40,19 @@ namespace program2
                         {
                             case 1:
                                 Console.WriteLine("请输入你想查询的订单号:");
-                                int num0 = Int32.Parse(Console.ReadLine());
+                                int num0 = -1;
+                                try
+                                {
+                                    num0 = Int32.Parse(Console.ReadLine());
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine(e.Message);
+                                }
                                 try
                                 {
                                     int flag0 = orderService.searchByNum(num0);
-                                    Console.WriteLine("已查到：" + orderService.Nums[flag0] + orderService.goodName[flag0] + orderService.customerName[flag0]);
+                                    Console.WriteLine("已查到：" + orderService.Nums[flag0] + "  " + orderService.goodName[flag0] + "  " + orderService.customerName[flag0]);
                                 }
                                 catch(Exception e)
                                 {
@@ -41,7 +65,7 @@ namespace program2
                                 try
                                 {
                                     int flag1 = orderService.searchByGoodName(goodName);
-                                    Console.WriteLine("已查到：" + orderService.Nums[flag1] + orderService.goodName[flag1] + orderService.customerName[flag1]);
+                                    Console.WriteLine("已查到：" + orderService.Nums[flag1] + "  "+orderService.goodName[flag1] + "  " + orderService.customerName[flag1]);
                                 }
                                 catch(Exception e)
                                 {
@@ -54,7 +78,7 @@ namespace program2
                                 try
                                 {
                                     int flag2 = orderService.searchByCustomerName(customerName);
-                                    Console.WriteLine("已查到：" + orderService.Nums[flag2] + orderService.goodName[flag2] + orderService.customerName[flag2]);
+                                    Console.WriteLine("已查到："+ orderService.Nums[flag2] + "  " + orderService.goodName[flag2] + "  " + orderService.customerName[flag2]);
                                 }
                                 catch(Exception e)
                                 {
@@ -97,10 +121,19 @@ namespace program2
                     case 3:
                         Console.WriteLine("请输入你想删除的订单号：");
                         int num = Int32.Parse(Console.ReadLine());
-                        int flag = orderService.searchByNum(num);
+                        int flag = -1;
+                        try
+                        {
+                            flag = orderService.searchByNum(num);
+                        }
+                        catch(Exception e)
+                        {
+                            Console.WriteLine("错误：未查找到该订单号  " + e.Message);
+                        }
                         orderService.deleteNum(flag);
                         orderService.deleteGoodName(flag);
                         orderService.deleteCustomerName(flag);
+                        Console.WriteLine("OK!");
                         break;
                     case 4:
                         Console.WriteLine("请输入你想添加的订单的订单号：");
@@ -112,6 +145,7 @@ namespace program2
                         orderService.addOrder(hao);
                         orderService.addGoodName(shangming);
                         orderService.addCustomerName(yongming);
+                        Console.WriteLine("OK!");
                         break;
                     case 5:
                         Environment.Exit(0);
